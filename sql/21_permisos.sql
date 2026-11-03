@@ -81,6 +81,8 @@ GRANT SELECT,INSERT,UPDATE ON dbo.Contacto TO rol_recalls_admin;
 GRANT SELECT,INSERT,UPDATE ON dbo.SucursalContacto TO rol_recalls_admin;
 GRANT SELECT,INSERT,UPDATE ON dbo.CodigoRecall TO rol_recalls_admin;
 GO
+PRINT N'Instalación finalizada. Ejecutar 22_pruebas.sql y luego 23_consultas.sql.';
+GO
 PRINT N'Instalación finalizada. Ejecutar pruebas/22_pruebas.sql y luego consultas/23_consultas.sql.';
 GO
 
