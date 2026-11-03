@@ -45,19 +45,15 @@ Ejecutar como dbo con permiso para crear bases. Cada script selecciona su base y
 
 El 00 crea **RecallsUADE** y se detiene si ya existe: no modifica ni elimina una base previa. Los archivos de instalación se ejecutan una sola vez; no son migraciones idempotentes. Ante un error, revisar qué objetos llegaron a crearse antes de repetir el script.
 
-## Instalación completa en SSMS
+## Instalación en SSMS
 
-Abrir `EJECUTAR_TODO.sql`, activar **Consulta → Modo SQLCMD** y reemplazar la variable `Carpeta` por la ruta absoluta de este repositorio. Mantener las comillas si hay espacios. Ejemplo:
+Activar **Consulta → Modo SQLCMD** y ejecutar los archivos individualmente en el orden indicado arriba. Cada uno selecciona su base y establece sus opciones.
 
-```text
-:setvar Carpeta "C:/Users/lafam/UADE/IngenieriaDeDatos/REPO RECALLS"
-```
-
-Ejecutar: incluye las etapas 00 a 21. Después ejecutar por separado `pruebas/22_pruebas.sql` y `consultas/23_consultas.sql`, también en modo SQLCMD.
+El ejecutor usa rutas relativas para ejecutarse desde la raíz del repositorio en la terminal. Si se abre en SSMS, cambiar las rutas de las líneas `:r` por rutas absolutas, conservando las comillas. No depender del directorio de trabajo de SSMS.
 
 ## Instalación por terminal
 
-Desde la raíz del repositorio, dejando `Carpeta` con el valor `.` en el ejecutor:
+Desde la raíz del repositorio (la carpeta que contiene `EJECUTAR_TODO.sql`):
 
 ```powershell
 sqlcmd -S "(localdb)\MSSQLLocalDB" -E -C -b -f 65001 -i "EJECUTAR_TODO.sql"
