@@ -1,6 +1,6 @@
 # Gestión de recalls automotores — TPO Base de Datos I
 
-Base para SQL Server 2019 o posterior. Se mantienen los nombres del ZIP por etapas, organizados en carpetas. La lógica de negocio está en restricciones, funciones, procedimientos y triggers.
+Base para SQL Server 2019 o posterior. La lógica de negocio está en restricciones, funciones, procedimientos y triggers.
 
 ## Carpetas
 
@@ -11,8 +11,6 @@ Base para SQL Server 2019 o posterior. Se mantienen los nombres del ZIP por etap
 - `docs/contexto.md`: contexto que antes estaba en este README, conservado íntegro como antecedente.
 - `MER.svg`: modelo existente del grupo.
 - `EJECUTAR_TODO.sql`: ejecutor de los scripts 00 a 21 con sus rutas actualizadas.
-
-El archivo vacío `docs/archivo` preexistente se conserva; no interviene en la ejecución. `origen.json` era metadato de la separación del instalador original, no es necesario y no se incluye.
 
 ## Orden de ejecución
 
